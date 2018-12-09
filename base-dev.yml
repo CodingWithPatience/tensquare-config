@@ -36,3 +36,6 @@ info:
   company.name: tensquare.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+  
+label:
+  name: zhihao
