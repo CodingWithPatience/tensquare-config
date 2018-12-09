@@ -1,0 +1,55 @@
+server:
+  port: 9010
+  
+spring:
+  application:
+    name: tensquare-friend
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tensquare_friend?characterEncoding=utf8&useSSL=false
+    username: root
+    password: admin
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 1
+    timeout: 5000
+    jedis:
+      pool:
+        max-active: 20
+        max-idle: 20
+        min-idle: 0
+        max-wait: -1
+        
+  devtools:
+    restart:
+      enabled: false
+        
+jwt:
+  config:
+    key: zhihao
+    ttl: 7200000
+    
+# eureka client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.com:7001/eureka/
+  instance:
+    instance-id: tensquare-friend         # 在eureka server中显示的实例名称
+    prefer-ip-address: true               # 显示id
+    
+info:
+  app.name: tensquare
+  company.name: tensquare.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

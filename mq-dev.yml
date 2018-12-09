@@ -1,0 +1,10 @@
+server:
+  port: 9009
+  
+spring:
+  application:
+    name: tensquare-mq
+    
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672

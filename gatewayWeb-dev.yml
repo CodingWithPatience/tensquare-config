@@ -1,0 +1,52 @@
+server:
+  port: 9011
+  
+spring:
+  application:
+    name: tensquare-gateway-web
+    
+  devtools:
+    restart:
+      enabled: false
+    
+# eureka client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.com:7001/eureka/
+  instance:
+    instance-id: tensquare-gateway-web    # 在eureka server中显示的实例名称
+    prefer-ip-address: true               # 显示id
+    
+zuul:
+  routes:
+    tensquare-base:
+      path: /base/**
+      service-id: tensquare-base
+    tensquare-user:
+      path: /user/**
+      service-id: tensquare-user
+    tensquare-article:
+      path: /article/**
+      service-id: tensquare-article
+    tensquare-spit:
+      path: /spit/**
+      service-id: tensquare-spit
+    tensquare-friend:
+      path: /friend/**
+      service-id: tensquare-friend
+    tensquare-question_answer:
+      path: /qa/**
+      service-id: tensquare-qa
+    tensquare-gathering:
+      path: /gathering/**
+      service-id: tensquare-gathering
+    tensquare-recruit:
+      path: /recruit/**
+      service-id: tensquare-recruit
+    
+info:
+  app.name: tensquare
+  company.name: tensquare.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

@@ -1,0 +1,47 @@
+server:
+  port: 9003
+  
+spring:
+  application:
+    name: tensquare-question_answer
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tensquare_qa?characterEncoding=utf8&useSSL=false
+    username: root
+    password: admin
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    
+  devtools:
+    restart:
+      enabled: false
+    
+jwt:
+  config:
+    key: zhihao
+    
+# eureka client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.com:7001/eureka/
+  instance:
+    instance-id: tensquare-qa             # 在eureka server中显示的实例名称
+    prefer-ip-address: true               # 显示id
+
+# 开启熔断服务    
+feign:
+  hystrix:
+    enabled: true
+
+info:
+  app.name: tensquare
+  company.name: tensquare.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
