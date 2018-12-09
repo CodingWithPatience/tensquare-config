@@ -30,6 +30,10 @@ spring:
         min-idle: 0
         max-wait: -1
         
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+        
   devtools:
     restart:
       enabled: false
