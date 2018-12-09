@@ -8,7 +8,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/tensquare_base?characterEncoding=utf8&useSSL=false
     username: root
-    password: ad
+    password: admin
   jpa:
     database: mysql
     show-sql: true
