@@ -34,9 +34,9 @@ spring:
     host: 127.0.0.1
     port: 5672
     
-  devtools:
-    restart:
-      enabled: false
+  #devtools:
+    #restart:
+      #enabled: false
 
 jwt:
   config:
