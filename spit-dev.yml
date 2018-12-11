@@ -15,11 +15,11 @@ spring:
     time-zone: GMT+8
     
   rabbitmq:
-    host: 127.0.0.1
+    host: 192.168.254.128
     port: 5672
     
   redis:
-    host: 127.0.0.1
+    host: 192.168.254.128
     port: 6379
     database: 2
     timeout: 5000
