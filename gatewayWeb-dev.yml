@@ -17,7 +17,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka.com:7001/eureka/
+      defaultZone: http://192.168.254.128:7001/eureka/
   instance:
     instance-id: tensquare-gateway-web    # 在eureka server中显示的实例名称
     prefer-ip-address: true               # 显示id
