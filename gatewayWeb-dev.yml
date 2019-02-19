@@ -39,7 +39,7 @@ zuul:
     tensquare-friend:
       path: /friends/**
       service-id: tensquare-friend
-    tensquare-question-answer:
+    tensquare-qa:
       path: /qa/**
       service-id: tensquare-qa
     tensquare-gathering:
