@@ -37,7 +37,7 @@ zuul:
       path: /spit/**
       service-id: tensquare-spit
     tensquare-friend:
-      path: /friend/**
+      path: /friends/**
       service-id: tensquare-friend
     tensquare-question-answer:
       path: /qa/**
