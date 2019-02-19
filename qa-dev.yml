@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: tensquare-question_answer
+    name: tensquare-qa
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.254.128:3306/tensquare_qa?characterEncoding=utf8&useSSL=false
